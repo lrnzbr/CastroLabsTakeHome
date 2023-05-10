@@ -8,17 +8,41 @@
 
 /* Begin PBXBuildFile section */
 		EBFAEC952A0B0B56008A0434 /* CastroLabsTakeHomeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFAEC942A0B0B56008A0434 /* CastroLabsTakeHomeApp.swift */; };
-		EBFAEC972A0B0B56008A0434 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFAEC962A0B0B56008A0434 /* ContentView.swift */; };
 		EBFAEC992A0B0B58008A0434 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBFAEC982A0B0B58008A0434 /* Assets.xcassets */; };
 		EBFAEC9C2A0B0B58008A0434 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBFAEC9B2A0B0B58008A0434 /* Preview Assets.xcassets */; };
+		EBFAECA32A0B0E08008A0434 /* LandingOnboardingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFAECA22A0B0E08008A0434 /* LandingOnboardingScene.swift */; };
+		EBFAECA52A0B117F008A0434 /* CustomComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFAECA42A0B117F008A0434 /* CustomComponents.swift */; };
+		EBFAECA72A0B1378008A0434 /* EnterInviteCodeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFAECA62A0B1378008A0434 /* EnterInviteCodeScene.swift */; };
+		EBFAECA92A0B14D0008A0434 /* Montserrat in Resources */ = {isa = PBXBuildFile; fileRef = EBFAECA82A0B14D0008A0434 /* Montserrat */; };
+		EBFAECAD2A0B1725008A0434 /* LetsGetGoingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFAECAC2A0B1725008A0434 /* LetsGetGoingScene.swift */; };
+		EBFAECAF2A0B19EE008A0434 /* CreateYourAccountScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFAECAE2A0B19EE008A0434 /* CreateYourAccountScene.swift */; };
+		EBFAECB12A0B2445008A0434 /* VerifyPhoneScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFAECB02A0B2445008A0434 /* VerifyPhoneScene.swift */; };
+		EBFAECB32A0B2770008A0434 /* CreateYourProfileScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFAECB22A0B276F008A0434 /* CreateYourProfileScene.swift */; };
+		EBFAECB52A0B29EC008A0434 /* PronounsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFAECB42A0B29EC008A0434 /* PronounsSheet.swift */; };
+		EBFAECB72A0B3C57008A0434 /* AddAProfilePicScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFAECB62A0B3C57008A0434 /* AddAProfilePicScene.swift */; };
+		EBFAECB92A0B4809008A0434 /* SelfieVerificationScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFAECB82A0B4809008A0434 /* SelfieVerificationScene.swift */; };
+		EBFAECBB2A0B4B46008A0434 /* VerifyingSelfieScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFAECBA2A0B4B46008A0434 /* VerifyingSelfieScene.swift */; };
+		EBFAECBD2A0B4CED008A0434 /* TurnOnNotificationsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFAECBC2A0B4CED008A0434 /* TurnOnNotificationsScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EBFAEC912A0B0B56008A0434 /* CastroLabsTakeHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CastroLabsTakeHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBFAEC942A0B0B56008A0434 /* CastroLabsTakeHomeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastroLabsTakeHomeApp.swift; sourceTree = "<group>"; };
-		EBFAEC962A0B0B56008A0434 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EBFAEC982A0B0B58008A0434 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBFAEC9B2A0B0B58008A0434 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EBFAECA22A0B0E08008A0434 /* LandingOnboardingScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingOnboardingScene.swift; sourceTree = "<group>"; };
+		EBFAECA42A0B117F008A0434 /* CustomComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomComponents.swift; sourceTree = "<group>"; };
+		EBFAECA62A0B1378008A0434 /* EnterInviteCodeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterInviteCodeScene.swift; sourceTree = "<group>"; };
+		EBFAECA82A0B14D0008A0434 /* Montserrat */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Montserrat; sourceTree = "<group>"; };
+		EBFAECAC2A0B1725008A0434 /* LetsGetGoingScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetsGetGoingScene.swift; sourceTree = "<group>"; };
+		EBFAECAE2A0B19EE008A0434 /* CreateYourAccountScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateYourAccountScene.swift; sourceTree = "<group>"; };
+		EBFAECB02A0B2445008A0434 /* VerifyPhoneScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneScene.swift; sourceTree = "<group>"; };
+		EBFAECB22A0B276F008A0434 /* CreateYourProfileScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateYourProfileScene.swift; sourceTree = "<group>"; };
+		EBFAECB42A0B29EC008A0434 /* PronounsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PronounsSheet.swift; sourceTree = "<group>"; };
+		EBFAECB62A0B3C57008A0434 /* AddAProfilePicScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAProfilePicScene.swift; sourceTree = "<group>"; };
+		EBFAECB82A0B4809008A0434 /* SelfieVerificationScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfieVerificationScene.swift; sourceTree = "<group>"; };
+		EBFAECBA2A0B4B46008A0434 /* VerifyingSelfieScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyingSelfieScene.swift; sourceTree = "<group>"; };
+		EBFAECBC2A0B4CED008A0434 /* TurnOnNotificationsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnOnNotificationsScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +59,19 @@
 		EBFAEC882A0B0B56008A0434 = {
 			isa = PBXGroup;
 			children = (
+				EBFAECBC2A0B4CED008A0434 /* TurnOnNotificationsScene.swift */,
+				EBFAECBA2A0B4B46008A0434 /* VerifyingSelfieScene.swift */,
+				EBFAECB82A0B4809008A0434 /* SelfieVerificationScene.swift */,
+				EBFAECB22A0B276F008A0434 /* CreateYourProfileScene.swift */,
+				EBFAECB62A0B3C57008A0434 /* AddAProfilePicScene.swift */,
+				EBFAECB42A0B29EC008A0434 /* PronounsSheet.swift */,
+				EBFAECAC2A0B1725008A0434 /* LetsGetGoingScene.swift */,
+				EBFAECB02A0B2445008A0434 /* VerifyPhoneScene.swift */,
+				EBFAECAE2A0B19EE008A0434 /* CreateYourAccountScene.swift */,
+				EBFAECA22A0B0E08008A0434 /* LandingOnboardingScene.swift */,
+				EBFAECA62A0B1378008A0434 /* EnterInviteCodeScene.swift */,
+				EBFAECA42A0B117F008A0434 /* CustomComponents.swift */,
+				EBFAECA82A0B14D0008A0434 /* Montserrat */,
 				EBFAEC932A0B0B56008A0434 /* CastroLabsTakeHome */,
 				EBFAEC922A0B0B56008A0434 /* Products */,
 			);
@@ -52,7 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				EBFAEC942A0B0B56008A0434 /* CastroLabsTakeHomeApp.swift */,
-				EBFAEC962A0B0B56008A0434 /* ContentView.swift */,
 				EBFAEC982A0B0B58008A0434 /* Assets.xcassets */,
 				EBFAEC9A2A0B0B58008A0434 /* Preview Content */,
 			);
@@ -127,6 +163,7 @@
 			files = (
 				EBFAEC9C2A0B0B58008A0434 /* Preview Assets.xcassets in Resources */,
 				EBFAEC992A0B0B58008A0434 /* Assets.xcassets in Resources */,
+				EBFAECA92A0B14D0008A0434 /* Montserrat in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +174,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBFAEC972A0B0B56008A0434 /* ContentView.swift in Sources */,
+				EBFAECAD2A0B1725008A0434 /* LetsGetGoingScene.swift in Sources */,
+				EBFAECB32A0B2770008A0434 /* CreateYourProfileScene.swift in Sources */,
 				EBFAEC952A0B0B56008A0434 /* CastroLabsTakeHomeApp.swift in Sources */,
+				EBFAECB12A0B2445008A0434 /* VerifyPhoneScene.swift in Sources */,
+				EBFAECA52A0B117F008A0434 /* CustomComponents.swift in Sources */,
+				EBFAECA32A0B0E08008A0434 /* LandingOnboardingScene.swift in Sources */,
+				EBFAECBB2A0B4B46008A0434 /* VerifyingSelfieScene.swift in Sources */,
+				EBFAECA72A0B1378008A0434 /* EnterInviteCodeScene.swift in Sources */,
+				EBFAECB72A0B3C57008A0434 /* AddAProfilePicScene.swift in Sources */,
+				EBFAECBD2A0B4CED008A0434 /* TurnOnNotificationsScene.swift in Sources */,
+				EBFAECB52A0B29EC008A0434 /* PronounsSheet.swift in Sources */,
+				EBFAECAF2A0B19EE008A0434 /* CreateYourAccountScene.swift in Sources */,
+				EBFAECB92A0B4809008A0434 /* SelfieVerificationScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
