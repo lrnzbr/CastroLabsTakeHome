@@ -18,7 +18,7 @@ struct SelfieVerificationScene: View {
 					Image("selfie").resizable().frame(width: 120, height: 120)
 				}
 				Spacer()
-				DefaultButton(title: "Take a selfie"){}
+				//DefaultButton(title: "Take a selfie"){}
 			}
 		}.background(Color.black.edgesIgnoringSafeArea([.top, .bottom]))
     }

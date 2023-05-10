@@ -13,7 +13,6 @@
 		EBFAECA32A0B0E08008A0434 /* LandingOnboardingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFAECA22A0B0E08008A0434 /* LandingOnboardingScene.swift */; };
 		EBFAECA52A0B117F008A0434 /* CustomComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFAECA42A0B117F008A0434 /* CustomComponents.swift */; };
 		EBFAECA72A0B1378008A0434 /* EnterInviteCodeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFAECA62A0B1378008A0434 /* EnterInviteCodeScene.swift */; };
-		EBFAECA92A0B14D0008A0434 /* Montserrat in Resources */ = {isa = PBXBuildFile; fileRef = EBFAECA82A0B14D0008A0434 /* Montserrat */; };
 		EBFAECAD2A0B1725008A0434 /* LetsGetGoingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFAECAC2A0B1725008A0434 /* LetsGetGoingScene.swift */; };
 		EBFAECAF2A0B19EE008A0434 /* CreateYourAccountScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFAECAE2A0B19EE008A0434 /* CreateYourAccountScene.swift */; };
 		EBFAECB12A0B2445008A0434 /* VerifyPhoneScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFAECB02A0B2445008A0434 /* VerifyPhoneScene.swift */; };
@@ -23,6 +22,8 @@
 		EBFAECB92A0B4809008A0434 /* SelfieVerificationScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFAECB82A0B4809008A0434 /* SelfieVerificationScene.swift */; };
 		EBFAECBB2A0B4B46008A0434 /* VerifyingSelfieScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFAECBA2A0B4B46008A0434 /* VerifyingSelfieScene.swift */; };
 		EBFAECBD2A0B4CED008A0434 /* TurnOnNotificationsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFAECBC2A0B4CED008A0434 /* TurnOnNotificationsScene.swift */; };
+		EBFAECC02A0C0E81008A0434 /* BentImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFAECBF2A0C0E81008A0434 /* BentImagePickerView.swift */; };
+		EBFAECC22A0C14A8008A0434 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFAECC12A0C14A8008A0434 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +34,6 @@
 		EBFAECA22A0B0E08008A0434 /* LandingOnboardingScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingOnboardingScene.swift; sourceTree = "<group>"; };
 		EBFAECA42A0B117F008A0434 /* CustomComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomComponents.swift; sourceTree = "<group>"; };
 		EBFAECA62A0B1378008A0434 /* EnterInviteCodeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterInviteCodeScene.swift; sourceTree = "<group>"; };
-		EBFAECA82A0B14D0008A0434 /* Montserrat */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Montserrat; sourceTree = "<group>"; };
 		EBFAECAC2A0B1725008A0434 /* LetsGetGoingScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetsGetGoingScene.swift; sourceTree = "<group>"; };
 		EBFAECAE2A0B19EE008A0434 /* CreateYourAccountScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateYourAccountScene.swift; sourceTree = "<group>"; };
 		EBFAECB02A0B2445008A0434 /* VerifyPhoneScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneScene.swift; sourceTree = "<group>"; };
@@ -43,6 +43,8 @@
 		EBFAECB82A0B4809008A0434 /* SelfieVerificationScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfieVerificationScene.swift; sourceTree = "<group>"; };
 		EBFAECBA2A0B4B46008A0434 /* VerifyingSelfieScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyingSelfieScene.swift; sourceTree = "<group>"; };
 		EBFAECBC2A0B4CED008A0434 /* TurnOnNotificationsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnOnNotificationsScene.swift; sourceTree = "<group>"; };
+		EBFAECBF2A0C0E81008A0434 /* BentImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BentImagePickerView.swift; sourceTree = "<group>"; };
+		EBFAECC12A0C14A8008A0434 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		EBFAEC882A0B0B56008A0434 = {
 			isa = PBXGroup;
 			children = (
+				EBFAECBE2A0C0E55008A0434 /* Utilities */,
 				EBFAECBC2A0B4CED008A0434 /* TurnOnNotificationsScene.swift */,
 				EBFAECBA2A0B4B46008A0434 /* VerifyingSelfieScene.swift */,
 				EBFAECB82A0B4809008A0434 /* SelfieVerificationScene.swift */,
@@ -70,8 +73,6 @@
 				EBFAECAE2A0B19EE008A0434 /* CreateYourAccountScene.swift */,
 				EBFAECA22A0B0E08008A0434 /* LandingOnboardingScene.swift */,
 				EBFAECA62A0B1378008A0434 /* EnterInviteCodeScene.swift */,
-				EBFAECA42A0B117F008A0434 /* CustomComponents.swift */,
-				EBFAECA82A0B14D0008A0434 /* Montserrat */,
 				EBFAEC932A0B0B56008A0434 /* CastroLabsTakeHome */,
 				EBFAEC922A0B0B56008A0434 /* Products */,
 			);
@@ -101,6 +102,16 @@
 				EBFAEC9B2A0B0B58008A0434 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EBFAECBE2A0C0E55008A0434 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				EBFAECBF2A0C0E81008A0434 /* BentImagePickerView.swift */,
+				EBFAECC12A0C14A8008A0434 /* Extensions.swift */,
+				EBFAECA42A0B117F008A0434 /* CustomComponents.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,7 +174,6 @@
 			files = (
 				EBFAEC9C2A0B0B58008A0434 /* Preview Assets.xcassets in Resources */,
 				EBFAEC992A0B0B58008A0434 /* Assets.xcassets in Resources */,
-				EBFAECA92A0B14D0008A0434 /* Montserrat in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,7 +194,9 @@
 				EBFAECA72A0B1378008A0434 /* EnterInviteCodeScene.swift in Sources */,
 				EBFAECB72A0B3C57008A0434 /* AddAProfilePicScene.swift in Sources */,
 				EBFAECBD2A0B4CED008A0434 /* TurnOnNotificationsScene.swift in Sources */,
+				EBFAECC22A0C14A8008A0434 /* Extensions.swift in Sources */,
 				EBFAECB52A0B29EC008A0434 /* PronounsSheet.swift in Sources */,
+				EBFAECC02A0C0E81008A0434 /* BentImagePickerView.swift in Sources */,
 				EBFAECAF2A0B19EE008A0434 /* CreateYourAccountScene.swift in Sources */,
 				EBFAECB92A0B4809008A0434 /* SelfieVerificationScene.swift in Sources */,
 			);

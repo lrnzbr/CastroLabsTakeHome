@@ -9,11 +9,17 @@ import SwiftUI
 
 
 final class PronounsSheetViewModel: ObservableObject {
-
-	@Published var preferredPronouns:[String] = []
-	@Published var allPronouns = ["He/Him", "She/Her", "They/Them", "Ze/Zir", "Ze/Hir", "Xe/Xem", "Any Pronouns"]
 	@Published var assignedNumber = 0
-	func addNewPronouns(pronoun:String){
+
+	func getNumberAssignmentForPronoun(pronoun:String, preferredPronouns:[String])->Int {
+		if !preferredPronouns.contains(pronoun){
+			return assignedNumber
+		} else {
+			return preferredPronouns.firstIndex(of: pronoun)! + 1
+		}
+	}
+
+	func addNewPronouns(pronoun:String, preferredPronouns:inout [String]){
 		if preferredPronouns.contains(pronoun){
 			preferredPronouns.removeAll { $0 == pronoun }
 			assignedNumber -= 1
@@ -26,18 +32,14 @@ final class PronounsSheetViewModel: ObservableObject {
 		assignedNumber += 1
 		return
 	}
-	func getNumberAssignmentForPronoun(pronoun:String)->Int {
-		if !preferredPronouns.contains(pronoun){
-			return assignedNumber
-		} else {
-			return preferredPronouns.firstIndex(of: pronoun)! + 1
-		}
-	}
 }
 
 
 struct PronounsSheet: View {
 	@StateObject var viewModel = PronounsSheetViewModel()
+	@Binding var preferredPronouns:[String]
+	var allPronouns:[String]
+
 
 	var body: some View {
 		ZStack{
@@ -66,13 +68,13 @@ struct PronounsSheet: View {
 				// PRONOUN RADIO BUTTONS
 
 				VStack(spacing: 0) {
-					ForEach($viewModel.allPronouns, id: \.self) { pronoun in
-						PronounViewContainer(pronounTitle: pronoun.wrappedValue, isSelected: viewModel.preferredPronouns.contains(pronoun.wrappedValue), assignedNumber: viewModel.getNumberAssignmentForPronoun(pronoun: pronoun.wrappedValue)).onTapGesture {
-							viewModel.addNewPronouns(pronoun: pronoun.wrappedValue)
+					ForEach(allPronouns, id: \.self) { pronoun in
+						PronounViewContainer(pronounTitle: pronoun, isSelected: $preferredPronouns.wrappedValue.contains( pronoun), assignedNumber: viewModel.getNumberAssignmentForPronoun(pronoun: pronoun, preferredPronouns: preferredPronouns)).onTapGesture {
+							viewModel.addNewPronouns(pronoun: pronoun, preferredPronouns: &preferredPronouns)
 						}
 						}
 					}
-				}
+			}.frame(maxHeight: .infinity)
 
 
 			}.background(Color.black.edgesIgnoringSafeArea([.top, .bottom]))
@@ -80,11 +82,11 @@ struct PronounsSheet: View {
 	}
 
 
-struct PronounsSheet_Previews: PreviewProvider {
-    static var previews: some View {
-        PronounsSheet()
-    }
-}
+//struct PronounsSheet_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PronounsSheet()
+//    }
+//}
 
 
 struct PronounRadioButton: View {

@@ -11,7 +11,8 @@ import SwiftUI
 struct CastroLabsTakeHomeApp: App {
     var body: some Scene {
         WindowGroup {
-			CreateYourAccountScene()
+			LandingOnboardingScene()
+			//CreateYourProfileScene()
         }
     }
 }

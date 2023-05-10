@@ -17,8 +17,10 @@ struct TurnOnNotificationsScene: View {
 				TitleText("Turn on notifications")
 				BodyText("Star is a community messaging app.  For the best experience, turn on notifications so you don't miss messages")
 				Spacer()
-				DefaultButton(title: "Turn on Notifications"){}
-				DefaultButton(title: "Skip for now"){}
+				LabelButtonBlue("Next")
+				LabelButtonTransparent("Skip for now")
+				//DefaultButton(title: "Turn on Notifications"){}
+				//DefaultButton(title: "Skip for now"){}
 			}.background(Color.black.edgesIgnoringSafeArea([.top, .bottom]))
 		}
     }

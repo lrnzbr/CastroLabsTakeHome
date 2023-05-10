@@ -8,38 +8,52 @@
 import SwiftUI
 
 struct LetsGetGoingScene: View {
+	@Environment(\.presentationMode) var mode: Binding<PresentationMode>
+
     var body: some View {
 		ZStack{
 			AppColors.background
 			VStack {
 				Spacer()
-				TitleText("Let's get going!")
-				HStack{
-					Image("queerComic")
-						.resizable()
-						.frame(width: 80, height: 80)
-						.cornerRadius(16)
+				VStack(alignment: .leading){
+					TitleText("Let's get going!")
 
-					VStack(alignment: .leading) {
-						BodyText("Queer League Comics")
-						BodyText("81 Members")
+					HStack{
+						Image("queerComic")
+							.resizable()
+							.frame(width: 96, height: 96)
+							.cornerRadius(16)
+
+						VStack(alignment: .leading) {
+							BodyText("Queer League Comics")
+							BodyText("81 Members")
+						}
+
+
 					}
-
-
+					.padding()
+					.background(Color(hex:"2C2C2E"))
+					.cornerRadius(16)
 				}
-				.padding()
-				.background(AppColors.secondary)
-				.cornerRadius(16)
-
 				BodyText("We're going to save this for now and get you set up with a Star profile first.")
+					.padding()
+					.multilineTextAlignment(.center)
 
 				Spacer()
 				Spacer() 
-				DefaultButton(title: "Next"){}
+				NavigationLink(destination: CreateYourAccountScene()){
+					LabelButtonBlue("Next")
+				}
 			}
-			.padding()
 
-		}.background(Color.black.edgesIgnoringSafeArea([.top, .bottom]))
+
+		}.navigationBarBackButtonHidden(true)
+			.navigationBarItems(leading: Button(action : {
+				self.mode.wrappedValue.dismiss()
+			}){
+				Image(systemName: "chevron.left").foregroundColor(.white)
+			})
+			.background(Color.black.edgesIgnoringSafeArea([.top, .bottom]))
     }
 }
 

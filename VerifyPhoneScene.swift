@@ -8,17 +8,28 @@
 import SwiftUI
 
 struct VerifyPhoneScene: View {
+	@Environment(\.presentationMode) var mode: Binding<PresentationMode>
+
 	var body: some View {
 		ZStack{
 			VStack{
-				TitleText("Verify your phone")
-				BodyText("Please enter the code we sent to +1 (123) 456-7890 ")
-				ContentView()
-				DefaultButton(title: "Resend Code"){}
+				TitleText("Verify your phone").padding(.vertical)
+				BodyText("Please enter the code we sent to +1 (123) 456-7890 ").padding(.vertical)
+				VerificationCodeNumbers()
+
+				NavigationLink(destination: CreateYourProfileScene()){
+					LabelButtonTransparent("Resend Code")
+				}
 				Spacer()
 
-			}
-		}.background(Color.black.edgesIgnoringSafeArea([.top, .bottom]))
+			}.frame(maxWidth: .infinity)
+		}.navigationBarBackButtonHidden(true)
+			.navigationBarItems(leading: Button(action : {
+				self.mode.wrappedValue.dismiss()
+			}){
+				Image(systemName: "chevron.left").foregroundColor(.white)
+			})
+			.background(Color.black.edgesIgnoringSafeArea([.top, .bottom]))
 	}
 }
 
@@ -29,7 +40,7 @@ struct VerifyPhoneScene_Previews: PreviewProvider {
 }
 
 
-class ViewModel: ObservableObject {
+class VerificationCodeNumbersViewModel: ObservableObject {
 
 	@Published var otpField = "" {
 		didSet {
@@ -87,9 +98,9 @@ class ViewModel: ObservableObject {
 
 }
 
-struct ContentView: View {
+struct VerificationCodeNumbers: View {
 
-	@StateObject var viewModel = ViewModel()
+	@StateObject var viewModel = VerificationCodeNumbersViewModel()
 	@State var isFocused = false
 
 	let textBoxWidth = UIScreen.main.bounds.width / 8

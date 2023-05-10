@@ -7,35 +7,64 @@
 
 import SwiftUI
 
-struct CreateYourAccountScene: View {
-	@State private var emailAddress:String = ""
-	@State private var dateOfBirth:Date = Date()
+final class CreateYourAccountSceneViewModel: ObservableObject {
+	@Published  var emailAddress:String = ""
+	@Published  var dateOfBirth:Date = Date()
+	@Published var dateOfBirthAlertHasBeenShown:Bool
+	init(){
+		self.dateOfBirthAlertHasBeenShown = false
+	}
+}
 
+struct CreateYourAccountScene: View {
+
+	@Environment(\.presentationMode) var mode: Binding<PresentationMode>
+	@StateObject var viewModel = CreateYourAccountSceneViewModel()
 
 
 	var body: some View {
 		ZStack {
 			VStack {
 				TitleText("Create your account")
-				VStack {
-					BodyText("Phone Number")
+					.padding(.vertical)
+
+				VStack(alignment: .leading, spacing: 0) {
+					FormLabelText("Phone Number")
 					PhoneNumberTextField()
 				}
 
 				VStack(alignment: .leading, spacing: 0) {
-					BodyText("Email").padding(.horizontal)
-					RegistrationTextInput(placeholder: "Email address", value: $emailAddress)
+					FormLabelText("Email").padding(.horizontal)
+					RegistrationTextInput(placeholder: "Email address", value: $viewModel.emailAddress)
 				}
 				VStack(alignment: .leading, spacing: 0) {
-					BodyText("Birthdate").padding(.horizontal)
-					RegistrationDateSelectorInput(dateChosen: $dateOfBirth)
+					FormLabelText("Birthdate").padding(.horizontal)
+					RegistrationDateSelectorInput(dateChosen: $viewModel.dateOfBirth)
 
 				}
 				Spacer()
-				DefaultButton(title: "Next"){}
+				//if viewModel.dateOfBirthAlertHasBeenShown ==  {
+					NavigationLink(destination: VerifyPhoneScene()){
+						LabelButtonBlue("Next")
+					}
+//				} else {
+//						LabelButtonBlue("Next").onTapGesture {
+//							viewModel.dateOfBirthAlertHasBeenShown = true
+//						}
+//					}
 			}
 		}
+		.navigationBarBackButtonHidden(true)
+		.navigationBarItems(leading: Button(action : {
+			self.mode.wrappedValue.dismiss()
+		}){
+			Image(systemName: "chevron.left").foregroundColor(.white)
+		})
 		.background(Color.black.edgesIgnoringSafeArea([.top, .bottom]))
+		.alert("You entered December 18, 1998. You can only change this once, so be sure it is accurate.", isPresented: $viewModel.dateOfBirthAlertHasBeenShown, actions: {
+			Button("Confirm", role: .destructive, action: {viewModel.dateOfBirthAlertHasBeenShown = true })
+				Button("Go Back", role: .cancel) { }
+			})
 	}
 }
 
@@ -71,7 +100,7 @@ struct CountryCodes : View {
 						self.countryCode = value
 						self.countryFlag = self.flag(country: key)
 						withAnimation(.spring()) {
-							self.y = 150
+							self.y = 550
 						}
 					}
 			}
@@ -143,7 +172,7 @@ struct CountryCodes : View {
 
 struct PhoneNumberTextField : View {
 	@State var phoneNumber = ""
-	@State var y : CGFloat = 450
+	@State var y : CGFloat = 1000
 	@State var countryCode = ""
 	@State var countryFlag = ""
 	var body: some View {
@@ -153,23 +182,20 @@ struct PhoneNumberTextField : View {
 					.frame(width: 80, height: 50)
 					.background(Color.secondary.opacity(0.2))
 					.cornerRadius(10)
-					.foregroundColor(countryCode.isEmpty ? .secondary : .black)
-//					.onTapGesture {
-//						withAnimation (.spring()) {
-//							self.y = 350
-//						}
-//					}
+					.foregroundColor(.gray)
+					.onTapGesture {
+						withAnimation (.spring()) {
+							self.y = 250
+						}
+					}
 				TextField("Phone Number", text: $phoneNumber)
 					.padding()
 					.frame(width: 200, height: 50)
 					.keyboardType(.phonePad)
-			}.padding()
-
+					.foregroundColor(.white)
+			}
 			CountryCodes(countryCode: $countryCode, countryFlag: $countryFlag, y: $y)
 				.offset(y: y)
-
-			RoundedRectangle(cornerRadius: 10).stroke()
-				.frame(width: 280, height: 50)
 		}.frame(height: 60)
 	}
 }
